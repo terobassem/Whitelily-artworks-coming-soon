@@ -27,24 +27,44 @@ import {
    ────────────────────────────────────────────── */
 
 export default function ComingSoonPage() {
-  /* ── Video Controls ── */
+  /* ── Video & Audio Controls ── */
   const videoRef = useRef<HTMLVideoElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const videoSectionRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const [isVidPlaying, setIsVidPlaying] = useState(true);
   const [isVidMuted, setIsVidMuted] = useState(true);
 
-  /* ── Hero video helpers ── */
+  /* ── Hero video & audio helpers ── */
   const togglePlay = () => {
     if (!videoRef.current) return;
-    if (isPlaying) { videoRef.current.pause(); setIsPlaying(false); }
-    else { videoRef.current.play(); setIsPlaying(true); }
+    if (isPlaying) {
+      videoRef.current.pause();
+      if (audioRef.current) audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef.current.play();
+      if (audioRef.current && !isMuted) {
+        audioRef.current.play().catch(() => {});
+      }
+      setIsPlaying(true);
+    }
   };
+
   const toggleMute = () => {
-    if (!videoRef.current) return;
-    videoRef.current.muted = !isMuted;
-    setIsMuted(!isMuted);
+    if (!audioRef.current) return;
+    if (isMuted) {
+      // Unmute: play music
+      audioRef.current.muted = false;
+      audioRef.current.play().catch(() => {});
+      setIsMuted(false);
+    } else {
+      // Mute: mute and pause music
+      audioRef.current.muted = true;
+      audioRef.current.pause();
+      setIsMuted(true);
+    }
   };
 
   /* ── Section video helpers ── */
@@ -75,7 +95,7 @@ export default function ComingSoonPage() {
           SECTION 1 — CINEMATIC FULL-SCREEN VIDEO HERO
           ═══════════════════════════════════════════════ */}
       <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-brand-teal text-white">
-        {/* Background Video */}
+        {/* Background Video (Permanently Muted) */}
         <video
           ref={videoRef}
           src="/video.mp4"
@@ -84,6 +104,14 @@ export default function ComingSoonPage() {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover scale-105"
+        />
+
+        {/* Background Music instead of video original audio */}
+        <audio
+          ref={audioRef}
+          src="/hero-music.mp3"
+          loop
+          preload="auto"
         />
 
         {/* Artistic overlays */}
