@@ -370,43 +370,78 @@ export default function ComingSoonPage() {
           MINIMAL LUXURY FOOTER
           ═══════════════════════════════════════════════ */}
       <footer className="py-12 bg-brand-teal text-white border-t border-brand-gold/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-          <div>
-            <p className="font-serif-luxury text-xl font-bold tracking-wider text-white">WHITELILY</p>
-            <p className="text-xs text-brand-ivory/70 tracking-widest uppercase mt-0.5">By Lydia Malak</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div>
+              <p className="font-serif-luxury text-xl font-bold tracking-wider text-white">WHITELILY</p>
+              <p className="text-xs text-brand-ivory/70 tracking-widest uppercase mt-0.5">By Lydia Malak</p>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.instagram.com/whitelily.by.lydiamalak/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-coral hover:text-white flex items-center justify-center transition-all"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://wa.me/201149530508"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-all"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-4 h-4" />
+              </a>
+              <a
+                href="mailto:Whitelily.artworks@gmail.com"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-teal flex items-center justify-center transition-all"
+                aria-label="Email"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
+
+            <p className="text-xs text-brand-ivory/50">
+              © {new Date().getFullYear()} WHITELILY by Lydia Malak. All rights reserved.
+            </p>
           </div>
 
-          <div className="flex items-center gap-4">
+          {/* Developer Credit */}
+          <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-2 text-[11px] text-brand-ivory/50">
+            <span>Developed by</span>
+            <span className="text-white font-medium">Phelobater B.Basha</span>
+            <span className="hidden sm:inline">·</span>
             <a
-              href="https://www.instagram.com/whitelily.by.lydiamalak/"
+              href="https://wa.me/201228646329"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-coral hover:text-white flex items-center justify-center transition-all"
-              aria-label="Instagram"
+              className="text-brand-coral hover:underline"
             >
-              <Instagram className="w-4 h-4" />
+              WhatsApp: 01228646329
             </a>
+            <span className="hidden sm:inline">·</span>
             <a
-              href="https://wa.me/201149530508"
+              href="https://www.linkedin.com/in/phelobater-b-basha"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-all"
-              aria-label="WhatsApp"
+              className="text-brand-coral hover:underline"
             >
-              <MessageCircle className="w-4 h-4" />
+              LinkedIn
             </a>
+            <span className="hidden sm:inline">·</span>
             <a
-              href="mailto:Whitelily.artworks@gmail.com"
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-teal flex items-center justify-center transition-all"
-              aria-label="Email"
+              href="https://phelobaterbashaportfolio.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-coral hover:underline"
             >
-              <Mail className="w-4 h-4" />
+              Portfolio
             </a>
           </div>
-
-          <p className="text-xs text-brand-ivory/50">
-            © {new Date().getFullYear()} WHITELILY by Lydia Malak. All rights reserved.
-          </p>
         </div>
       </footer>
 
