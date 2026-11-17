@@ -8,7 +8,9 @@ import {
   ShieldCheck, 
   Sparkles, 
   ArrowUpRight,
-  Heart
+  Heart,
+  Globe,
+  Linkedin
 } from "lucide-react";
 
 export default function Footer() {
@@ -209,36 +211,42 @@ export default function Footer() {
         </div>
 
         {/* Developer Credit */}
-        <div className="mt-4 pb-6 flex flex-col sm:flex-row items-center justify-center gap-2 text-[10px] text-brand-ivory/40 border-t border-brand-teal-light/20 pt-4">
+        <div className="mt-4 pb-6 flex flex-wrap items-center justify-center gap-3 text-[10px] text-brand-ivory/40 border-t border-brand-teal-light/20 pt-4">
           <span>Developed by</span>
           <span className="text-brand-ivory/60 font-medium">Phelobater B.Basha</span>
-          <span className="hidden sm:inline">·</span>
-          <a
-            href="https://wa.me/201228646329"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-emerald-400 transition-colors"
-          >
-            WhatsApp: 01228646329
-          </a>
-          <span className="hidden sm:inline">·</span>
-          <a
-            href="https://www.linkedin.com/in/phelobater-b-basha"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-400 transition-colors"
-          >
-            LinkedIn
-          </a>
-          <span className="hidden sm:inline">·</span>
-          <a
-            href="https://phelobaterbashaportfolio.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-brand-coral transition-colors"
-          >
-            Portfolio
-          </a>
+          <span className="text-white/20">·</span>
+          <div className="flex items-center gap-2">
+            <a
+              href="https://wa.me/201228646329"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-6 h-6 rounded-full bg-white/10 hover:bg-emerald-600 hover:text-white flex items-center justify-center text-brand-ivory/70 transition-all"
+              title="WhatsApp (01228646329)"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/phelobater-b-basha"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#0077b5] hover:text-white flex items-center justify-center text-brand-ivory/70 transition-all"
+              title="LinkedIn"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="https://phelobaterbashaportfolio.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-6 h-6 rounded-full bg-white/10 hover:bg-brand-coral hover:text-white flex items-center justify-center text-brand-ivory/70 transition-all"
+              title="Portfolio"
+              aria-label="Portfolio"
+            >
+              <Globe className="w-3.5 h-3.5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

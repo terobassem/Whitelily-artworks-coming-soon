@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "WHITELILY | Coming Soon — Heritage Gypsum Craftsmanship by Lydia Malak",
+  title: "Whitelily-artworks",
   description: "WHITELILY by Lydia Malak — Heritage-inspired gypsum creations including architectural gypsum tiles, stained-glass gypsum windows, carved relief panels, gypsum mosaics, and fresco paintings. Coming Soon.",
-  keywords: ["WHITELILY", "Lydia Malak", "Gypsum Art", "Traditional Arts", "Heritage Craftsmanship", "Interior Design", "Jameel House", "King's Foundation"],
+  keywords: ["WHITELILY", "Whitelily-artworks", "Lydia Malak", "Gypsum Art", "Traditional Arts", "Heritage Craftsmanship", "Interior Design", "Jameel House", "King's Foundation"],
   openGraph: {
-    title: "WHITELILY | Coming Soon — Heritage Gypsum Craftsmanship by Lydia Malak",
+    title: "Whitelily-artworks",
     description: "Heritage-inspired gypsum creations — architectural tiles, stained-glass windows, carved relief panels, mosaics, and fresco paintings.",
     url: "https://whitelily-artworks.com",
-    siteName: "WHITELILY",
+    siteName: "Whitelily-artworks",
     images: [
       {
         url: "/logo.png",
