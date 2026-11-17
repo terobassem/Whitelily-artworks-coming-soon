@@ -207,6 +207,11 @@ export default function Footer() {
             <Heart className="w-3.5 h-3.5 text-brand-coral fill-brand-coral" />
           </p>
         </div>
+
+        {/* Developer Credit */}
+        <div className="mt-4 pb-6 flex items-center justify-center text-[10px] text-brand-ivory/40 border-t border-brand-teal-light/20 pt-4">
+          <span>Developed by <span className="text-brand-ivory/60 font-medium">Whitelily-artworks</span></span>
+        </div>
       </div>
     </footer>
   );
